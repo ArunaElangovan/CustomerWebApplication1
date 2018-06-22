@@ -1,20 +1,303 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="customer-web-app" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav id="chat-header" class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <img id="brand-img" src="assets/images/hyundai-logo.jpeg" alt="hyundai-logo" alt="">
+      <div id="name">Aruna</div>
+      <input id="chat-img" type="image" src="assets/images/Message.svg" alt="message icon" />
+    </div>
+  </nav>
 
+  <div id="chat-window" style="background-color:light-blue; ">
+    <div id="service-details" class="hline-bottom">
+      <!-- Number plate -->
+      <!-- <div class="number-plate">
+        <div class="number-plate-country">ind</div>
+        <div class="number-plate-number">ka03jh0143</div>
+      </div> -->
+
+      <!-- Ambassador info -->
+      <div class="row">
+        <div id="profile-img-wpr" style="width: 10%;">
+          <!-- style="width: 10%;" class="col-xs-1 col-sm-1 col-md-1 col-lg-1"-->
+          <img class="profile-img" src="assets/images/img_avatar.png" alt="Smiley face" align="left">
+        </div>
+        <div style="width: 5%;"></div>
+        <!-- style="width: 5%;" class="col-xs-1 col-sm-1 col-md-1 col-lg-1"-->
+        <div id="amb-details" style="width: 60%; margin-top: 1%;">
+          <!-- style="width: 60%;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"-->
+          Ambassador name<br>
+          <!-- <img class="rating-img" src="assets/images/star-selected.svg" alt="Smiley face"> -->
+          Ambassador on the way for pickup
+        </div>
+        <div style="width: 15%;"></div>
+        <!-- style="width: 15%;" class="col-xs-3 col-sm-3 col-md-3 col-lg-3"-->
+        <div id="call-button" class="d-block d-md-none " style=" width: 10%; margin-top: 1%;">
+          <!-- style=" width: 10%; margin-top: 1%;" col-xs-1 col-sm-1-->
+          <a href="tel:555-555-5555"><img src="assets/images/call.svg" /></a>
+        </div>
+      </div>
+
+      <!-- Step bar -->
+      <div class="stepwizard">
+        <div class="stepwizard-row">
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-primary btn-circle">1</button>
+            <p>Ambassador assigned</p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-primary btn-circle">2</button>
+            <p>Ambassador reached</p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-primary btn-circle">3</button>
+            <p>At the service centre</p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-primary btn-circle" disabled="disabled">4</button>
+            <p>On the way to the customer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal details -->
+    <div class="chat-bubble-wrpr">
+      <div class="chat-bubble">
+        <input id="personal_edit" class="chat-bubble-edit-img" type="image" src="assets/images/Edit.svg" alt="edit icon" />
+        <div class="chat-bubble-header col-xs-3 col-sm-3 col-md-12 col-lg-12">Personal Details</div>
+        <div class="chat-bubble-body">
+          <span>
+            <div>
+              <div class="chat-bubble-normal-span col-md-4 bold-font">Name</div><div id="name-in-chat"class="chat-bubble-normal-span col-md-8">Aruna Elangovan</div>
+            </div>
+            <div>
+              <div class="chat-bubble-normal-span col-md-4 bold-font">Phone</div><div id="number-in-chat" class="chat-bubble-normal-span col-md-8">9151000333</div>
+            </div>
+            <div>
+              <div class="chat-bubble-normal-span col-md-4 bold-font">Email</div><div id="email-in-chat" class="chat-bubble-normal-span col-md-8">aruna@21north.in</div>
+            </div>
+          </span>
+        </div>
+        <div class="chat-bubble-time">2.22 pm</div>
+      </div>
+    </div>
+
+    <!-- Scheduling time -->
+    <div class="chat-bubble-wrpr">
+      <div class="chat-bubble">
+        <input id="" class="chat-bubble-edit-img" type="image" src="assets/images/Edit.svg" alt="edit icon" />
+        <div class="chat-bubble-header col-xs-3 col-sm-3 col-md-12 col-lg-12">Scheduling Details
+        </div>
+        <div class="chat-bubble-body">
+          <span>
+            <div>
+              <div class="chat-bubble-normal-span col-md-5 bold-font">Pick up date</div><div class="chat-bubble-normal-span col-md-7">18/06/2018</div>
+            </div>
+            <div>
+              <div class="chat-bubble-normal-span col-md-5 bold-font">Pick up time</div><div class="chat-bubble-normal-span col-md-7">08:45 am</div>
+            </div>
+          </span>
+        </div>
+        <div class="chat-bubble-time">2.22 pm</div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="chat-bubble-wrpr">
+      <div class="chat-bubble">
+        <input id="" class="chat-bubble-edit-img" type="image" src="assets/images/Edit.svg" alt="edit icon" />
+        <div class="chat-bubble-header col-xs-3 col-sm-3 col-md-12 col-lg-12">Location Details</div>
+        <div class="chat-bubble-body">
+          <span>
+            <div class="chat-bubble-normal-span margin-10-px"><span class="bold-font">Pick up location :</span> 26, 9th B Main, LBS Nagar, HAL, Bengaluru, Karnataka 560017</div>
+        <div class="chat-bubble-normal-span margin-10-px"><span class="bold-font">Pick up location :</span> 26, 9th B Main, LBS Nagar, HAL, Bengaluru, Karnataka 560017</div>
+        </span>
+      </div>
+      <div class="chat-bubble-time">2.22 pm</div>
+    </div>
+  </div>
+
+  <!-- Complaints -->
+  <div class="chat-bubble-wrpr">
+    <div class="chat-bubble">
+      <input id="complaints_edit" class="chat-bubble-edit-img" type="image" src="assets/images/Edit.svg" alt="edit icon" />
+      <div class="chat-bubble-header col-xs-3 col-sm-3 col-md-12 col-lg-12">Complaint Details</div>
+      <div class="chat-bubble-body">
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+        <div class="complaint-div">lorem ipsum</div>
+      </div>
+      <div class="chat-bubble-time">2.22 pm</div>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div class="chat-bubble-wrpr">
+    <div id="map" class="chat-bubble"></div>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+    </script>
+    <script type="text/javascript">
+      function initMap() {
+        // The location of Uluru var uluru = {lat: -25.344, lng: 131.036};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+  </div>
+
+  <!-- Photo modal -->
+  <div class="modal" id="photoModal">
+    <div class="modal-dialog" style="min-width: 90%;">
+      <div id="section1" class="container-fluid">
+        <img class="carousel-img1" id="carousel-img11" src="assets/images/hero-logo.png" alt="Los Angeles">
+      </div><br>
+      <div id="section2" class="container-fluid">
+        <img class="carousel-img1" src="assets/images/hyundai-logo.jpeg" alt="Chicago">
+      </div><br>
+      <div id="section1" class="container-fluid">
+        <img class="carousel-img1" id="carousel-img11" src="assets/images/img_avatar.png" alt="Los Angeles">
+      </div><br>
+      <div id="section2" class="container-fluid">
+        <img class="carousel-img1" src="assets/images/hyundai-logo.jpeg" alt="Chicago">
+      </div><br>
+      <!-- <embed class="pdf-embed" src="assets/pdf/example.pdf" style="min-width: 100%; min-height: 100vh;" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"> -->
+    </div>
+  </div>
+
+  <!-- Photo carousel -->
+  <div id="photo-carousel" class="carousel slide col-xs-5 col-sm-5 col-md-3 col-lg-3" data-interval="false">
+    <!-- data-ride="carousel" for auto slide -->
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#photo-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#photo-carousel" data-slide-to="1"></li>
+      <li data-target="#photo-carousel" data-slide-to="2"></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner" id="tr" data-toggle="modal" data-target="#photoModal">
+      <div class="carousel-item active">
+        <img class="carousel-img" id="carousel-img1" src="assets/images/hero-logo.png" alt="Los Angeles">
+      </div>
+      <div class="carousel-item">
+        <img class="carousel-img" src="assets/images/hyundai-logo.jpeg" alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img class="carousel-img" src="assets/images/img_avatar.png" alt="New York">
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#photo-carousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+    <a class="carousel-control-next" href="#photo-carousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+  </div>
+
+  <!-- Estimate details -->
+  <div class="chat-bubble-wrpr">
+    <div class="chat-bubble">
+      <div class="chat-bubble-header col-xs-3 col-sm-3 col-md-12 col-lg-12">Service Centre Estimate
+      </div>
+      <div class="chat-bubble-body">
+        <span>
+            <div>
+              <div class="chat-bubble-normal-span col-xs-3 col-sm-3 col-md-12 col-lg-12 bold-font">Total servicing charge</div><div class="chat-bubble-normal-span col-md-4">Rs 20000</div>
+            </div>
+            <div>
+              <div class="chat-bubble-normal-span col-xs-3 col-sm-3 col-md-12 col-lg-12 bold-font">Estimated date of delivery</div><div class="chat-bubble-normal-span col-md-4">22/06/2018</div>
+            </div>
+            <div>
+              <div class="chat-bubble-normal-span col-xs-3 col-sm-3 col-md-12 col-lg-12 bold-font">Estimated time of delivery</div><div class="chat-bubble-normal-span col-md-4">08.30 am</div>
+            </div>
+          </span>
+      </div>
+      <div class="chat-bubble-time">2.22 pm</div>
+    </div>
+  </div>
+
+  <!-- Estimate Pdf modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog" style="min-width: 90%;">
+      <embed class="pdf-embed" src="assets/pdf/example.pdf" style="min-width: 100%; min-height: 100vh;" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+    </div>
+  </div>
+
+  <!--Estimate pdf  -->
+  <div id="chat-bubble-wrpr-pdf" class="align-horizontal">
+    <div class="" id="chat-pdf-bubble">
+      <input id="" class="chat-pdf-img" type="image" src="assets/images/pdf.png" alt="pdf icon" data-toggle="modal" data-target="#myModal" /><br> Invoice details
+    </div>
+    <div class="">
+      <a href="assets/pdf/example.pdf" download>
+          <img id="download-pdf" border="0" src="assets/images/Download.svg" alt="W3Schools" width="24" height="32">
+        </a>
+    </div>
+  </div>
+
+  <!-- Edit complaints -->
+  <div id="complaints-list" style="display:none;">
+    <ul>
+      <li>
+        <label for="option"> Complaint 1</label> <input id="" class="down-arrow" type="image" src="assets/images/expand-more.svg" data-toggle="collapse" data-target="#list1" />
+        <ul id="list1" class="collapse">
+          <li><label><input type="checkbox" class="subOption"> Subcomplaint 1</label></li>
+          <li><label><input type="checkbox" class="subOption"> Subcomplaint 2</label></li>
+          <li><label><input type="checkbox" class="subOption"> Subcomplaint 3</label></li>
+        </ul>
+      </li>
+
+      <li>
+        <label for="option1"> Complaint 2</label> <input id="" class="down-arrow" type="image" src="assets/images/expand-more.svg" data-toggle="collapse" data-target="#list2" />
+        <ul id="list2" class="collapse">
+          <li><label><input type="checkbox" class="subOption1"> Subcomplaint 1</label></li>
+          <li><label><input type="checkbox" class="subOption1"> Subcomplaint 2</label></li>
+          <li><label><input type="checkbox" class="subOption1"> Subcomplaint 3</label></li>
+        </ul>
+      </li>
+
+      <li>
+        <label for="option2"> Complaint 3</label> <input id="" class="down-arrow" type="image" src="assets/images/expand-more.svg" data-toggle="collapse" data-target="#list3" />
+        <ul id="list3" class="collapse">
+          <li><label><input type="checkbox" class="subOption2"> Subcomplaint 1</label></li>
+          <li><label><input type="checkbox" class="subOption2"> Subcomplaint 2</label></li>
+          <li><label><input type="checkbox" class="subOption2"> Subcomplaint 3</label></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Edit personal details -->
+  <div id="personal-card" style="display:none;" class="answer_list">
+    <div id="edit-personal-info-header">Edit Personal Info</div><br>
+    <div><input class="edit-info" id="name-edit" type="textarea" placeholder="Name"></div><br>
+    <div><input class="edit-info" id="email-edit" type="textarea" placeholder="Email"></div><br>
+    <div><input class="edit-info" id="number-edit" type="textarea" placeholder="Alernate number"></div><br>
+    <button id="update" type="button" class="btn btn-primary">update</button>
+  </div>
+  <!-- <input type="button" name="answer" value="Show Div" onclick="showDiv()" /> -->
+</div>
+<!-- chat footer -->
+<footer id="footer" role="contentinfo" style="display:none;">
+  <input id="chat-text" type="textarea" name="chat-text-box">
+  <button id="chat-enter" type="button" class="btn btn-primary">Send</button>
+</footer>
+</div>
